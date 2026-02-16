@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_4_0.xsd"
+             version="4.0">
+    <persistence-unit name="bookstore-PU" transaction-type="JTA">
+        <jta-data-source>jdbc/bookstore</jta-data-source>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+        <properties>
+            <property name="hibernate.connection.CharSet" value="utf8"/>
+            <property name="hibernate.connection.characterEncoding" value="utf8"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/bookstore"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value="postgres"/>
+            <property name="hibernate.connection.url" value="postgres"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/> <!-- DB Dialect -->
+            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
+
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+        </properties>
+    </persistence-unit>
+</persistence>

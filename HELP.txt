@@ -1,0 +1,39 @@
+Jakarta EE project example:
+
+It contains Jakarta with REST, the start point is web.xml
+Multi module project, containing resources:
+
+The war is in the target directory of the application module.
+It must be copied to the webapps directory of tomee server installation.
+
+To start project:
+- start tomee: rule catalina start in bin directory of tomee (we must have JAVA_HOME set)
+- rule the end-points:
+    http://localhost:8080/application-1.0-SNAPSHOT/api/...
+To start projct in debug mode:
+- copy the command:
+set JPDA_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000"
+in startup.bat in Tomee
+- rule > catalina jpda start in cmd bin from Tomee
+- in IntelliJ pun we must set a config Remote JVM Debug, we change only the port to be 8000
+- Set a header of type Authorization in Postman with value Basic dXNlcjpwYXNzd29yZA==
+- rule the end-points:
+    http://localhost:8080/application-1.0-SNAPSHOT/api/...
+
+For the treating of exceptions we have the module exceptions which contain classes Mapper for exception handlers.
+
+The connection to the database is with postgresql, specified in module application in resources/META-INF/persistence.xml
+and implemented with EntityManager in BookResource.xml
+
+For the connection to database to work, we have to create a resource
+in the file conf\tomee.xml from tomee server:
+<Resource id="MyDataSource" type="DataSource">
+  	JdbcDriver = org.postgresql.Driver
+  	JdbcUrl = jdbc:postgresql://localhost:5432/bookstore
+  	UserName = postgres
+  	Password = postgres
+  	JtaManaged = true
+  </Resource>
+  This configuration disables the default hsqldb for tomee in data folder.
+
+

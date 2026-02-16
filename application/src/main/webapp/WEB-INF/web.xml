@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app
+        xmlns = "https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation = "https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+        version = "5.0"
+        metadata-complete = "false">
+
+
+    <servlet>
+        <servlet-name>org.example.RestAplication</servlet-name>
+    </servlet>
+
+    <filter>
+        <filter-name>BasicAuthFilter</filter-name>
+        <filter-class>org.example.filters.BasicAuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>BasicAuthFilter</filter-name>
+        <url-pattern>/api/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>RoleBasedAuthFilter</filter-name>
+        <filter-class>org.example.filters.RoleBasedAuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RoleBasedAuthFilter</filter-name>
+        <url-pattern>/api/*</url-pattern>
+    </filter-mapping>
+
+</web-app>
