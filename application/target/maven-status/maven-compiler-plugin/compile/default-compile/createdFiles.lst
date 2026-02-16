@@ -1,0 +1,9 @@
+org\example\beans\AllowedRoles.class
+org\example\controller\ExceptionsResource.class
+org\example\filters\RoleBasedAuthFilter.class
+org\example\filters\BasicAuthFilter.class
+org\example\controller\BookResource.class
+org\example\entities\Book.class
+org\example\controller\HelloResource.class
+org\example\RestAplication.class
+org\example\entities\UserPassRole.class

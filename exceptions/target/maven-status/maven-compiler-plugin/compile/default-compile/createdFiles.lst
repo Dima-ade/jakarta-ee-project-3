@@ -1,0 +1,12 @@
+org\example\mapper\EJBExceptionMapper.class
+org\example\mapper\MissingItemExceptionMapper.class
+org\example\mapper\ItemNotFoundExceptionMapper.class
+org\example\mapper\ConstraintViolationxceptionMapper.class
+org\example\mapper\CustomBadRequestExceptionMapper.class
+org\example\mapper\EntityNotFoundMapper.class
+org\example\mapper\CustomValidationExceptionMapper.class
+org\example\exception\CustomBadRequestException.class
+org\example\exception\ItemNotFoundException.class
+org\example\mapper\GenericExceptionMapper.class
+org\example\mapper\MissingRequestHeaderExceptionMapper.class
+org\example\exception\MissingItemException.class

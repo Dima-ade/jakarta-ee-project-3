@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="CONSOLE"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %green(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}): %msg%n%throwable
+            </Pattern>
+        </layout>
+    </appender>
+
+<!--    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">-->
+<!--            <providers>-->
+<!--                <timestampFormat>yyyy-MM-dd'T'HH:mm:ss.SSSX</timestampFormat>-->
+<!--                <timestampFormatTimezoneId>Etc/UTC</timestampFormatTimezoneId>-->
+<!--                <message>message</message>-->
+<!--                <logger>logger</logger>-->
+<!--                <level>level</level>-->
+<!--            </providers>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+    <!-- LOG everything at INFO level -->
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>

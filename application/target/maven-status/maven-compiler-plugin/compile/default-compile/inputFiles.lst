@@ -1,0 +1,9 @@
+E:\Adela\Java\Java_Workspace\jakarta-ee-project-3\application\src\main\java\org\example\controller\HelloResource.java
+E:\Adela\Java\Java_Workspace\jakarta-ee-project-3\application\src\main\java\org\example\entities\Book.java
+E:\Adela\Java\Java_Workspace\jakarta-ee-project-3\application\src\main\java\org\example\beans\AllowedRoles.java
+E:\Adela\Java\Java_Workspace\jakarta-ee-project-3\application\src\main\java\org\example\controller\ExceptionsResource.java
+E:\Adela\Java\Java_Workspace\jakarta-ee-project-3\application\src\main\java\org\example\controller\BookResource.java
+E:\Adela\Java\Java_Workspace\jakarta-ee-project-3\application\src\main\java\org\example\RestAplication.java
+E:\Adela\Java\Java_Workspace\jakarta-ee-project-3\application\src\main\java\org\example\entities\UserPassRole.java
+E:\Adela\Java\Java_Workspace\jakarta-ee-project-3\application\src\main\java\org\example\filters\RoleBasedAuthFilter.java
+E:\Adela\Java\Java_Workspace\jakarta-ee-project-3\application\src\main\java\org\example\filters\BasicAuthFilter.java
